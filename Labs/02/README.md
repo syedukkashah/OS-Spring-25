@@ -7,7 +7,7 @@
 ![image](https://github.com/user-attachments/assets/39911146-d80f-45ef-9bc3-e259b01139ed)
 
 
-*Output*
+*Running make and the executable file*
 
 
 
@@ -16,7 +16,8 @@
 
 
 
-![image](https://github.com/user-attachments/assets/4dcc6e15-d74b-4a0f-a294-720c7423e0e0)
+![image](https://github.com/user-attachments/assets/0fe8def1-5490-471d-b00b-72ad46f0bcaa)
+
 
 
 
