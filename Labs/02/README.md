@@ -1,4 +1,4 @@
-**Task 1**
+**In lab Task 1**
 
 *Directory overview*
 ![image](https://github.com/user-attachments/assets/39911146-d80f-45ef-9bc3-e259b01139ed)
