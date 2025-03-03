@@ -4,7 +4,8 @@
 
 
 
-![image](https://github.com/user-attachments/assets/39911146-d80f-45ef-9bc3-e259b01139ed)
+![image](https://github.com/user-attachments/assets/ebed1d10-c081-477f-ab78-52824f6f3035)
+
 
 
 *Running make and the executable file*
