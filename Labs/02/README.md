@@ -43,3 +43,8 @@
 ![image](https://github.com/user-attachments/assets/167c41ae-5e09-4b1c-a0c9-4c099581551d)
 
 
+
+**in Lab Task 2**
+
+![image](https://github.com/user-attachments/assets/ecf3cc27-b398-4466-ade5-b69ec8a2c5d2)
+
