@@ -55,17 +55,16 @@
 
 
 
-
-
-
-**Post lab Task 1**
-
-![image](https://github.com/user-attachments/assets/ffb7c8f8-f4ba-4a1c-83cd-099fc4d33e8c)
-
-
-
 **in Lab Task 3**
 
 ![image](https://github.com/user-attachments/assets/555fec65-705f-478b-8a12-e314267a5556)
 
-**
+
+
+
+
+**Post Lab Task 1**
+
+
+
+![image](https://github.com/user-attachments/assets/ffb7c8f8-f4ba-4a1c-83cd-099fc4d33e8c)
