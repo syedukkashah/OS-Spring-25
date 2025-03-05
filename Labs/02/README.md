@@ -49,15 +49,6 @@
 ![image](https://github.com/user-attachments/assets/ecf3cc27-b398-4466-ade5-b69ec8a2c5d2)
 
 
-
-
-
-
-
-
-
-
-
 **in Lab Task 3**
 
 ![image](https://github.com/user-attachments/assets/555fec65-705f-478b-8a12-e314267a5556)
