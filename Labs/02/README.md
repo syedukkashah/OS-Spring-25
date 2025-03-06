@@ -80,3 +80,17 @@
 
 ![image](https://github.com/user-attachments/assets/c21ff5d7-918b-4c64-87ef-2327d575f360)
 
+
+
+
+
+**Post Lab Task 3**
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/75bf6d3b-d17b-4957-89c7-9c69822e38fd)
+
+
