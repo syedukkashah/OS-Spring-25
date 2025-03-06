@@ -68,3 +68,15 @@
 
 
 ![image](https://github.com/user-attachments/assets/ffb7c8f8-f4ba-4a1c-83cd-099fc4d33e8c)
+
+
+
+
+**Post Lab Task 2**
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/c21ff5d7-918b-4c64-87ef-2327d575f360)
+
