@@ -1,3 +1,5 @@
+#ifndef LINECOUNT_H
+#define LINECOUNT_H
 #include "iostream"
 #include "fstream"
 #include "string"
@@ -8,3 +10,4 @@ class LineCount{
 		LineCount(const string& filename);
 		int countLines();
 };
+#endif

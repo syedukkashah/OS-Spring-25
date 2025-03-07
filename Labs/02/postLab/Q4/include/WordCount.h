@@ -1,3 +1,5 @@
+#ifndef WORDCOUNT_H
+#define WORDCOUNT_H
 #include "iostream"
 #include "fstream"
 #include "string"
@@ -8,3 +10,4 @@ class WordCount{
 	WordCount(const string& filename);
 	int countWords();
 };
+#endif

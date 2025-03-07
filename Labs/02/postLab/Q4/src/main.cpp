@@ -6,10 +6,10 @@ using namespace std;
 int main(){
 	string f = "myFile.txt";
 	WordCount wc(f);
-	cout<<wc.countWords()<<endl;
+	cout<<"Word Count -> "<<wc.countWords()<<endl;
 	LetterCount lc(f);
-	cout<<lc.countLetters()<<endl;
+	cout<<"Letter Count -> "<<lc.countLetters()<<endl;
 	LineCount line(f);
-	cout<<line.countLines()<<endl;
+	cout<<"Line Count -> "<<line.countLines()<<endl;
 	return 0;
 }

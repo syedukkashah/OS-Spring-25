@@ -8,12 +8,13 @@ int LetterCount:: countLetters(){
 		cerr<<"Error opening file "<<endl;
 		return 1;
 	}
-	string word;
-	int wordCnt = 0;
-	while(file >> word)
-		wordCnt++;
-	
+	char ch;
+	int letterCnt = 0;
+	while(file.get(ch)){
+		if(isalpha(ch))
+			letterCnt++;
+	}
 	file.close();
-	return wordCnt;
+	return letterCnt;
 }
 
