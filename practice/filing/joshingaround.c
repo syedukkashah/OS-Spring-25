@@ -20,7 +20,7 @@ int main(){
 	}
 	else 
 		printf("successfully wrote %ld bytes to file\n", bytes_written);
-	lseek(fd, 0, SEEK_SET);
+	lseek(fd, 0, SEEK_SET); //next time read() is called it will read from the 0th byte from the file
 	char buffer[BUFFER_SIZE];
 	ssize_t bytes_read, bytes_written2;
 	int fd2 = open("josh2.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
