@@ -1,5 +1,12 @@
 # Linux Command Cheat Sheet
 
+## File permissions
+4 -> read
+2 -> write
+1 -> execute 
+
+user - group - others
+
 ## System Information Commands
 
 - **Show architecture of the machine:**
