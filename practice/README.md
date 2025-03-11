@@ -137,5 +137,4 @@
   
 ---
 
-This cheat sheet provides essential Linux commands for system information, file and directory management, modifying timestamps, file permissions, disk usage, copying files, and searching for patterns. 🚀
 
