@@ -3,7 +3,7 @@
 #include "stdlib.h"
 #include "fcntl.h"
 #include "string.h"
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 1024 //read 1KB at a time
 int main(){
 	//file to file writing & reading
 	int fd = open("josh.txt", O_CREAT| O_RDWR, 0644);
