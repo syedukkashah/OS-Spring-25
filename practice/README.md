@@ -2,7 +2,11 @@
 
 ## File permissions
 4 -> read
+
+
 2 -> write
+
+
 1 -> execute 
 
 user - group - others
