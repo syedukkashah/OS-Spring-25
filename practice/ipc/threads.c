@@ -15,7 +15,7 @@ int main(){
 	for(int i=0; i<NUM_THREADS; i++)
 	{
 		thread_args[i] = i+1;
-		printf("Creating thread %d\n",i+1);
+		printf("Creating thread %d\n", thread_args[i]);
 		pthread_create(&threads[i], NULL, helloWorld, NULL);
 	}
 	for(int i=0; i<5; i++) pthread_join(threads[i], NULL);
