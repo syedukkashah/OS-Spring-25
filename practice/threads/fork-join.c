@@ -37,4 +37,20 @@ int main(){
 	printf("total sum of array elements: %ld\n", total_sum);
 	return 0;
 }
+/*
+		Main Thread
+    │
+    ├── Fork ──▶ Thread 0 (sums elements 0–449,999)
+    ├── Fork ──▶ Thread 1 (sums elements 450,000–899,999)
+    ├── Fork ──▶ Thread 2 (sums elements 900,000–1,349,999)
+    └── Fork ──▶ Thread 3 (sums elements 1,350,000–1,799,999)
+    │
+    └── Join ←── Thread 0 (returns sum A)
+        Join ←── Thread 1 (returns sum B)
+        Join ←── Thread 2 (returns sum C)
+        Join ←── Thread 3 (returns sum D)
+    │
+    ▼
+Final Result: A + B + C + D
 
+*/
