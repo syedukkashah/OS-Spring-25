@@ -18,7 +18,7 @@ int main()
 	const char* name = "OS";
 	fd = shm_open(name, O_CREAT|O_RDWR, 0666); //create a shared mem obj
 	ftruncate(fd, size); //modify size of mem obj
-	ptr = (char*)mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED,fd, 0); //mem mapping
+	ptr = (char*)mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED,fd, 0); //mem mapping
 	sprintf(ptr, "%s", msg_0); //write msg to shared mem
 	ptr += strlen(msg_0); //inc ptr
 	sprintf(ptr, "%s", msg_1);
