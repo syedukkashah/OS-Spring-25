@@ -1,13 +1,13 @@
 ### Q6a)
 
 ```markdown
-# 🔄 Creating an Ordinary Pipe in C
+# Creating an Ordinary Pipe in C
 
 This program demonstrates **Inter-Process Communication (IPC)** using a **pipe** in C. It forks a child process and uses a unidirectional pipe to send a message from the parent to the child.
 
 ---
 
-## 📄 Original Code
+## Original Code
 
 ```c
 #include <sys/types.h>
@@ -57,9 +57,9 @@ int main(void) {
 
 ---
 
-## 🧪 In-Lab Instructions
+## In-Lab Instructions
 
-### ✅ Task 1: Compile and Execute the Code
+### Task 1: Compile and Execute the Code
 
 **Compilation:**
 
@@ -83,7 +83,7 @@ read Greetings
 
 ---
 
-### ✏️ Task 2: Modify the Code to Accept `write_msg` from User Input
+### Task 2: Modify the Code to Accept `write_msg` from User Input
 
 **Updated Code with User Input:**
 
