@@ -134,31 +134,3 @@ int main(void) {
     return 0;
 }
 ```
-
----
-
-## 📌 Notes
-
-- Pipes provide a simple way to communicate between related processes.
-- The `fork()` call splits the process into parent and child, and the pipe enables communication.
-- `fgets()` is used to read user input including spaces.
-- Always close the unused ends of the pipe in each process.
-
----
-
-## 🧰 To Do
-
-- [ ] Add error handling for `fgets()`.
-- [ ] Expand to bi-directional communication (use two pipes).
-- [ ] Try with larger buffer sizes and longer messages.
-
----
-
-## 👨‍💻 Author
-
-Coded for an Operating Systems Lab Exercise on **Inter-Process Communication**.
-
----
-```
-
-Let me know if you'd like to convert this into a full GitHub repo layout with `Makefile`, `.gitignore`, and license too.
