@@ -1,5 +1,6 @@
+### # Code Workout #2: Multithreading and Shared Counter in C
 ```markdown
-# Code Workout #2: Multithreading and Shared Counter in C
+
 
 This exercise demonstrates the behavior of a shared global variable (`counter`) accessed by multiple threads in a multithreaded C program using `pthread`.
 
