@@ -134,3 +134,153 @@ int main(void) {
     return 0;
 }
 ```
+### Q6c)
+```markdown
+#  POSIX Shared Memory IPC (Producer & Consumer)
+
+This lab demonstrates Inter-Process Communication (IPC) using **POSIX shared memory** with a **producer** writing messages and a **consumer** reading them.
+
+---
+
+##  Producer Code (POSIX Shared Memory)
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main() {
+    const int SIZE = 4096;               // size in bytes of shared memory object
+    const char *name = "OS";             // name of the shared memory object
+    const char *message_0 = "Hello";
+    const char *message_1 = "World!";
+    int fd;
+    char *ptr;
+
+    // Create the shared memory object
+    fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(fd, SIZE); // configure the size
+
+    // Map memory object
+    ptr = (char *)mmap(0, SIZE, PROT_WRITE, MAP_SHARED, fd, 0);
+
+    // Write messages
+    sprintf(ptr, "%s", message_0);
+    ptr += strlen(message_0);
+    sprintf(ptr, "%s", message_1);
+    ptr += strlen(message_1);
+
+    return 0;
+}
+```
+
+ **Compile with:**
+
+```bash
+gcc producer.c -o producer -lrt
+```
+
+---
+
+##  Consumer Code (POSIX Shared Memory)
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main() {
+    const int SIZE = 4096;
+    const char *name = "OS";
+    int fd;
+    char *ptr;
+
+    // Open existing shared memory object
+    fd = shm_open(name, O_RDONLY, 0666);
+
+    // Map memory object
+    ptr = (char *)mmap(0, SIZE, PROT_READ, MAP_SHARED, fd, 0);
+
+    // Read and display message
+    printf("%s\n", (char *)ptr);
+
+    // Cleanup
+    shm_unlink(name);
+
+    return 0;
+}
+```
+
+🛠 **Compile with:**
+
+```bash
+gcc consumer.c -o consumer -lrt
+```
+
+---
+
+## In-Lab Tasks
+
+### Task 1: Compile and Execute
+
+1. Compile the producer and consumer code as shown above.
+2. Run the **producer** first:
+   ```bash
+   ./producer
+   ```
+3. Then run the **consumer**:
+   ```bash
+   ./consumer
+   ```
+
+---
+
+### Task 2: Run-Time Error When Reversing Order
+
+If you run the **consumer first**, it throws a run-time error:
+
+```
+shm_open: No such file or directory
+```
+
+**Reason:** The consumer tries to open a shared memory object that doesn't exist yet because the producer hasn’t created it.
+
+---
+
+### Task 3: Run Both Concurrently
+
+1. Modify both programs to simulate concurrency (e.g., using delays or `sleep()`).
+2. Run them in separate terminals.
+3. Make sure the consumer does not unlink shared memory until it has finished reading.
+
+---
+
+### Task 4: Modify Producer to Send Two Messages
+
+Change producer code:
+
+```c
+sprintf(ptr, "%s\n", message_0);
+ptr += strlen(message_0) + 1;
+sprintf(ptr, "%s\n", message_1);
+```
+
+---
+
+### Task 5: Modify Consumer to Read Second Message
+
+Change consumer code:
+
+```c
+printf("First message: %s\n", ptr);
+ptr += strlen(ptr) + 1;
+printf("Second message: %s\n", ptr);
+```
+
+---
