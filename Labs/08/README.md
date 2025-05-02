@@ -8,7 +8,7 @@ This exercise demonstrates the behavior of a shared global variable (`counter`) 
 
 ## Code
 
-```c
+
 #include <stdio.h>
 #include <pthread.h>
 
