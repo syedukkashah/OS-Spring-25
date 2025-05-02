@@ -15,3 +15,6 @@
 
 ### Q6
 ![image](https://github.com/user-attachments/assets/b9aa5b7e-0a98-4073-a662-d382c70db6b0)
+
+### Q7
+![image](https://github.com/user-attachments/assets/6ef46080-470c-426e-90b8-ab878b5bc510)
