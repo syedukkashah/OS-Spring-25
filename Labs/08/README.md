@@ -100,7 +100,7 @@ int counter = 0;
 
 This line **shadows** the global `counter`, meaning each thread now has its own private `counter` variable.
 
-### 🖥Sample Output
+### Sample Output
 ```
 main: begin (counter = 0)
 A: begin
