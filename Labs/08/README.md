@@ -38,13 +38,13 @@ int main(int argc, char *argv[]) {
     printf("main: done with both (counter = %d)\n", counter);
     return 0;
 }
-```
+``` 
 
----
+
 
 ## a) Compile and Run the Code
 
-### 🛠️ Compilation
+### Compilation
 ```bash
 gcc -pthread -o thread_counter thread_counter.c
 ```
