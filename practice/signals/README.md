@@ -148,5 +148,101 @@ This program shows:
 * The threads sleep indefinitely to remain alive and receive signals.
 
 ---
+Great set of questions — here’s a clear breakdown of each concept:
+
+---
+
+### 🧵 1. **POSIX Thread ID (`pthread_t`)**
+
+* This is the **ID used in user space** by the POSIX Threads (pthreads) API.
+* It's what `pthread_create()`, `pthread_join()`, and `pthread_self()` work with.
+* **Returned by**: `pthread_self()`
+* **Type**: `pthread_t` (opaque, platform-dependent — sometimes a pointer, sometimes a number).
+
+---
+
+### 🧠 2. **Kernel Thread ID (TID)**
+
+* This is the **unique thread identifier in the Linux kernel**.
+
+* It is used by system-level operations like sending signals or inspecting threads via `/proc`.
+
+* **Returned by**: `gettid()`
+
+  * ⚠️ Not part of POSIX — Linux-specific. On some systems you need:
+
+    ```c
+    #include <sys/syscall.h>
+    pid_t tid = syscall(SYS_gettid);
+    ```
+
+* In Linux, every thread has a **TID** and the **main thread’s TID is equal to the PID**.
+
+---
+
+### 🧷 3. **`pthread_self()`**
+
+* Returns the **calling thread’s POSIX thread ID** (of type `pthread_t`).
+* Used when you want to identify yourself (e.g., in logs or signal handlers).
+* Example:
+
+  ```c
+  pthread_t id = pthread_self();
+  ```
+
+---
+
+### ⚙️ 4. **`gettid()`**
+
+* Returns the **kernel thread ID (TID)** of the calling thread.
+* Useful for debugging or when working with system-level tools or signals.
+* Must use `syscall()` on many systems:
+
+  ```c
+  #include <sys/syscall.h>
+  pid_t tid = syscall(SYS_gettid);
+  ```
+
+---
+
+### 💥 5. **`kill()`**
+
+* Sends a **signal to a process** by its **PID**.
+
+* Syntax:
+
+  ```c
+  kill(pid, signal_number);
+  ```
+
+* Example:
+
+  ```c
+  kill(getpid(), SIGUSR1);
+  ```
+
+  This sends `SIGUSR1` to the entire process — **any thread** can receive it.
+
+* If you want to send a signal to a **specific thread**, you must use:
+
+  ```c
+  pthread_kill(pthread_t thread, int signal);
+  ```
+
+---
+
+### ✅ Summary Table
+
+| Concept          | Description                                                     |
+| ---------------- | --------------------------------------------------------------- |
+| `pthread_t`      | POSIX thread ID (user-space thread ID) used in pthreads API.    |
+| `pthread_self()` | Returns the current thread's POSIX thread ID.                   |
+| `gettid()`       | Returns kernel thread ID (Linux-only, use `syscall`).           |
+| `kill(pid, sig)` | Sends a signal to the whole process (any thread may handle it). |
+| `pthread_kill()` | Sends a signal to a specific POSIX thread (targeted delivery).  |
+
+---
+
+
 
 
