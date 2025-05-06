@@ -14,6 +14,7 @@ void* avg(void* arg){
         sum+=data.arr[i];
     }
     printf("avg: %d\n", sum/data.size);
+    return NULL;
 }
  
 void* min(void* arg){
@@ -24,6 +25,7 @@ void* min(void* arg){
         if(data.arr[i]<min) min = data.arr[i];
     }
     printf("min = %d\n", min);
+    return NULL;
 }
 
 void* max(void* arg){
@@ -34,6 +36,7 @@ void* max(void* arg){
         if(data.arr[i]>max) max = data.arr[i];
     }
     printf("max = %d\n", max);
+    return NULL;
 }
 
 
