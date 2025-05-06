@@ -149,4 +149,14 @@ user - group - others
 ---
 
 
+| Feature            | Explanation                                              | Function Signature / Parameters                                                                                 |
+| ------------------ | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `pthread_create()` | Creates a new thread.                                    | `int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg);` |
+| `pthread_join()`   | Waits for a thread to finish.                            | `int pthread_join(pthread_t thread, void **retval);`                                                            |
+| `pthread_kill()`   | Sends signal to a specific thread.                       | `int pthread_kill(pthread_t thread, int sig);`                                                                  |
+| `kill()`           | Sends signal to the process (any thread may receive it). | `int kill(pid_t pid, int sig);`                                                                                 |
+| `signal()`         | Registers a signal handler for the **entire process**.   | `void (*signal(int signum, void (*handler)(int)))(int);`                                                        |
+
+
+
 
